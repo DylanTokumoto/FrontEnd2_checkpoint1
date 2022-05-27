@@ -111,7 +111,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 12px;
+  padding: 1rem;
   position: relative;
 }
 
@@ -120,8 +120,8 @@
 }
 
 #form__button {
-  margin: 15px 0 15px 0;
-  width: 10vw;
+  margin: 1rem 0 1rem 0;
+  width: 10rem;
   padding: 0.5rem;
   border: none;
   border-radius: 5px;
@@ -143,17 +143,37 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  max-width: 100vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
   height: 100vh;
+  overflow: auto;
   background: #a38068;
 }
 
 .gallery__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 25vw;
-  height: 70vh;
+  height: 80vh;
+  margin: 2rem;
   background-color: #23263d;
+}
+
+.card__image img {
+  width: 22vw;
+  height: 20vh;
 }
 
 .footer {
@@ -194,7 +214,7 @@
     font-size: 0.5rem;
   }
   .form {
-    width: 50vw;
+    width: 65vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
