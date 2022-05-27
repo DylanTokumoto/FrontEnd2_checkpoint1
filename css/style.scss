@@ -1,0 +1,179 @@
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+// RESET DEFAULT CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;  
+}
+
+
+
+// ================= HEADER STYLE ================
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    background-color: #363531; 
+}
+
+.header__nav{
+    width: 30vw;
+}
+
+
+.nav__ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav__ul a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.nav__ul li{
+    list-style: none;
+}
+
+
+
+// ================ BANNER STYLE ================
+.main__banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    color: antiquewhite;
+    background: rgb(163,128,104);
+    background: radial-gradient(circle, rgba(163,128,104,1) 5%, rgba(0,0,0,1) 100%);
+}
+
+
+
+// ====================== FORM STYLE ================
+.main__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+    background-color: #23263d;
+}
+
+.form{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: antiquewhite;
+    border-radius: 1rem;
+}
+
+.form__style{
+    width: 15vw;
+}
+
+.form__item{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    position: relative;
+}
+
+.form__item input{
+    padding: 0.5rem;
+}
+
+#form__button{
+    margin: 15px 0 15px 0;
+    width: 10vw;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: green;
+}
+
+#form__button:hover{
+    transform: scale(1.2);
+    transition: ease-in-out;
+}
+
+
+
+
+// =========== GALLERY STYLE =============
+.main__gallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100vw;
+    height: 100vh;
+    background: rgb(163,128,104);
+}
+
+.gallery__card{
+    width: 25vw;
+    height: 70vh;
+    background-color: #23263d;
+}
+
+
+
+
+
+// =================== FOOTER STYLE ==============
+.footer{
+    width: 100vw;
+    height: 25vh;
+    background-color: #363531;
+    padding: 1.5rem;
+}
+
+.footer__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer__link{
+    background-color: #9d9fa6;
+    color: black;
+    height: 20vh;
+    padding: 1rem;
+}
+
+.footer__link a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+// ============== MEDIA QUERY ==============
+
+@media screen and (max-width: 667px) {
+
+    .header__logo h1{
+        font-size: 1.5rem;
+    }
+
+    .nav__ul li{
+        font-size: 0.5rem;
+    }
+    
+    .form{
+        width: 50vw;
+    }
+}
