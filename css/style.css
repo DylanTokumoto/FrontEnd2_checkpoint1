@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --df-font-family: 'Poppins', sans-serif;
+  --banner-font: 'Dancing Script', sans-serif;
+  --bg-header-footer: #363531;
 }
 
 .header {
@@ -20,7 +27,8 @@
   width: 100vw;
   height: 10vh;
   color: white;
-  background-color: #363531;
+  background-color: var(--bg-header-footer);
+  font-family: var(--df-font-family);
 }
 
 .header__nav {
@@ -62,6 +70,8 @@
   color: antiquewhite;
   background: #a38068;
   background: radial-gradient(circle, #a38068 5%, black 100%);
+  font-family: var(--banner-font);
+  font-size: 3rem;
 }
 
 .main__form {
@@ -77,6 +87,7 @@
   width: 100vw;
   height: 90vh;
   background-color: #23263d;
+  font-family: var(--df-font-family);
 }
 
 .form {
@@ -127,6 +138,7 @@
   border-radius: 5px;
   cursor: pointer;
   background-color: green;
+  color: antiquewhite;
 }
 
 #form__button:hover {
@@ -150,6 +162,7 @@
   height: 100vh;
   overflow: auto;
   background: #a38068;
+  font-family: var(--df-font-family);
 }
 
 .gallery__card {
@@ -181,6 +194,7 @@
   height: 25vh;
   background-color: #363531;
   padding: 1.5rem;
+  font-family: var(--df-font-family);
 }
 
 .footer__flex {
@@ -207,14 +221,50 @@
 }
 
 @media screen and (max-width: 667px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 20vh;
+  }
   .header__logo h1 {
     font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .header__nav {
+    width: 50vw;
+    height: 15vh;
+    margin-right: 0.5rem;
+    padding: 1rem;
   }
   .nav__ul li {
-    font-size: 0.5rem;
+    font-size: 1rem;
+  }
+  .main__banner {
+    font-size: 2.5rem;
   }
   .form {
     width: 65vw;
+  }
+  .footer {
+    height: 45vh;
+    padding: 0.5rem;
+  }
+  .footer__link {
+    width: 30vw;
+    height: 43vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    width: 50vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
