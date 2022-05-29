@@ -62,7 +62,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 90vh;
+    min-height: 100vh;
     color: antiquewhite;
     background: rgb(163,128,104);
     background: radial-gradient(circle, rgba(163,128,104,1) 5%, rgba(0,0,0,1) 100%);
@@ -84,7 +84,7 @@
 }
 
 .form{
-    width: 25vw;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +95,7 @@
 }
 
 .form__style{
-    width: 15vw;
+    width: 20vw;
 }
 
 .form__item{
@@ -130,12 +130,11 @@
 
 // =========== GALLERY STYLE =============
 .main__gallery{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     width: 100vw;
-    height: 100vh;
-    overflow: auto;
+    height: auto;
     background: rgb(163,128,104);
     font-family: var(--df-font-family);
 }
@@ -145,15 +144,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 25vw;
-    height: 80vh;
-    margin: 2rem;
+    width: 30vw;
+    min-height: 80vh;
+    margin: 1rem;
+    padding: 1rem;
     background-color: #23263d;
+    color: antiquewhite;
 }
 
-.card__image img{
-    width: 22vw;
-    height: 20vh;
+.gallery__card img{
+    width: 27vw;
+    height: 30vh;
 }
 
 
@@ -196,8 +197,8 @@
     .header{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        height: 20vh;
+        justify-content: space-around;
+        height: 15vh;
     }
 
     .header__logo h1{
