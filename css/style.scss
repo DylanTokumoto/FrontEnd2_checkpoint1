@@ -3,19 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 
 // RESET DEFAULT CSS
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; 
-    overflow-x: hidden; 
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
 // ================= VARIAVEIS ================
 
-:root{
-    --df-font-family: 'Poppins', sans-serif; 
+:root {
+    --df-font-family: 'Poppins', sans-serif;
     --banner-font: 'Dancing Script', sans-serif;
     --bg-header-footer: #363531;
 }
@@ -23,49 +23,49 @@
 
 
 // ================= HEADER STYLE ================
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100vw;
     height: 10vh;
     color: white;
-    background-color: var(--bg-header-footer); 
+    background-color: var(--bg-header-footer);
     font-family: var(--df-font-family);
 }
 
-.header__nav{
+.header__nav {
     width: 30vw;
 }
 
 
-.nav__ul{
+.nav__ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.nav__ul a{
+.nav__ul a {
     text-decoration: none;
     color: antiquewhite;
 }
 
-.nav__ul li{
+.nav__ul li {
     list-style: none;
 }
 
 
 
 // ================ BANNER STYLE ================
-.main__banner{
+.main__banner {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     min-height: 100vh;
     color: antiquewhite;
-    background: rgb(163,128,104);
-    background: radial-gradient(circle, rgba(163,128,104,1) 5%, rgba(0,0,0,1) 100%);
+    background: rgb(163, 128, 104);
+    background: radial-gradient(circle, rgba(163, 128, 104, 1) 5%, rgba(0, 0, 0, 1) 100%);
     font-family: var(--banner-font);
     font-size: 3rem;
 }
@@ -73,7 +73,7 @@
 
 
 // ====================== FORM STYLE ================
-.main__form{
+.main__form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +83,7 @@
     font-family: var(--df-font-family);
 }
 
-.form{
+.form {
     width: 20vw;
     display: flex;
     flex-direction: column;
@@ -94,22 +94,38 @@
     border-radius: 1rem;
 }
 
-.form__style{
+.form__style {
     width: 20vw;
 }
 
-.form__item{
+.form__item {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     position: relative;
 }
 
-.form__item input{
+.form__item input {
     padding: 0.5rem;
 }
 
-#form__button{
+
+
+.form__item.sucess input {
+    border: green 2px solid;
+}
+
+.form__item.fail input {
+    border: red 2px solid;
+}
+
+
+
+
+
+
+
+#form__button {
     margin: 1rem 0 1rem 0;
     width: 10rem;
     padding: 0.5rem;
@@ -120,7 +136,7 @@
     color: antiquewhite;
 }
 
-#form__button:hover{
+#form__button:hover {
     transform: scale(1.2);
     transition: ease-in-out;
 }
@@ -129,17 +145,18 @@
 
 
 // =========== GALLERY STYLE =============
-.main__gallery{
+.main__gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     width: 100vw;
     height: auto;
-    background: rgb(163,128,104);
+    background: rgb(163, 128, 104);
     font-family: var(--df-font-family);
+    overflow: auto;
 }
 
-.gallery__card{
+.gallery__card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,7 +169,7 @@
     color: antiquewhite;
 }
 
-.gallery__card img{
+.gallery__card img {
     width: 27vw;
     height: 30vh;
 }
@@ -162,7 +179,7 @@
 
 
 // =================== FOOTER STYLE ==============
-.footer{
+.footer {
     width: 100vw;
     height: 25vh;
     background-color: #363531;
@@ -170,20 +187,20 @@
     font-family: var(--df-font-family);
 }
 
-.footer__flex{
+.footer__flex {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.footer__link{
+.footer__link {
     background-color: #9d9fa6;
     color: black;
     height: 20vh;
     padding: 1rem;
 }
 
-.footer__link a{
+.footer__link a {
     text-decoration: none;
     color: black;
 }
@@ -194,51 +211,61 @@
 
 @media screen and (max-width: 667px) {
 
-    .header{
+    .header {
         display: flex;
         align-items: center;
         justify-content: space-around;
         height: 15vh;
     }
 
-    .header__logo h1{
+    .header__logo h1 {
         font-size: 1.5rem;
         padding: 1rem;
     }
 
-    .header__nav{
+    .header__nav {
         width: 50vw;
         height: 15vh;
         margin-right: 0.5rem;
         padding: 1rem;
     }
 
-    .nav__ul li{
+    .nav__ul li {
         font-size: 1rem;
     }
 
-    .main__banner{
+    .main__banner {
         font-size: 2.5rem;
     }
-    
-    .form{
+
+    .main__gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery__card {
+        width: 90vw;
+    }
+
+    .form {
         width: 65vw;
     }
 
-    .footer{
-        height: 45vh;
+    .footer {
+        height: 30vh;
         padding: 0.5rem;
+        font-size: smaller;
     }
 
-    .footer__link{
+    .footer__link {
         width: 30vw;
         height: 43vh;
     }
 }
 
 
-@media (max-width: 900px){
-    .form{
+@media (max-width: 900px) {
+    .form {
         width: 50vw;
     }
 }

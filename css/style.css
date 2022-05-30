@@ -130,6 +130,14 @@
   padding: 0.5rem;
 }
 
+.form__item.sucess input {
+  border: green 2px solid;
+}
+
+.form__item.fail input {
+  border: red 2px solid;
+}
+
 #form__button {
   margin: 1rem 0 1rem 0;
   width: 10rem;
@@ -159,6 +167,7 @@
   height: auto;
   background: #a38068;
   font-family: var(--df-font-family);
+  overflow: auto;
 }
 
 .gallery__card {
@@ -246,12 +255,25 @@
   .main__banner {
     font-size: 2.5rem;
   }
+  .main__gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery__card {
+    width: 90vw;
+  }
   .form {
     width: 65vw;
   }
   .footer {
-    height: 45vh;
+    height: 30vh;
     padding: 0.5rem;
+    font-size: smaller;
   }
   .footer__link {
     width: 30vw;
