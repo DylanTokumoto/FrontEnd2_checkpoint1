@@ -17,7 +17,9 @@
 :root {
     --df-font-family: 'Poppins', sans-serif;
     --banner-font: 'Dancing Script', sans-serif;
-    --bg-header-footer: #363531;
+    --bg-header: #363531;
+    --fontColor: #faebd7;
+    --bg-gallery-footer: #23263d;
 }
 
 
@@ -29,8 +31,8 @@
     justify-content: space-around;
     width: 100vw;
     height: 10vh;
-    color: white;
-    background-color: var(--bg-header-footer);
+    color: var(--fontColor);
+    background-color: var(--bg-header);
     font-family: var(--df-font-family);
 }
 
@@ -47,7 +49,7 @@
 
 .nav__ul a {
     text-decoration: none;
-    color: antiquewhite;
+    color: var(--fontColor);
 }
 
 .nav__ul li {
@@ -63,7 +65,7 @@
     align-items: center;
     width: 100vw;
     min-height: 100vh;
-    color: antiquewhite;
+    color: var(--fontColor);
     background: rgb(163, 128, 104);
     background: radial-gradient(circle, rgba(163, 128, 104, 1) 5%, rgba(0, 0, 0, 1) 100%);
     font-family: var(--banner-font);
@@ -79,7 +81,7 @@
     justify-content: center;
     width: 100vw;
     height: 90vh;
-    background-color: #23263d;
+    background-color: var(--bg-gallery-footer);
     font-family: var(--df-font-family);
 }
 
@@ -90,7 +92,7 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    background-color: antiquewhite;
+    background-color: var(--fontColor);
     border-radius: 1rem;
 }
 
@@ -110,7 +112,6 @@
 }
 
 
-
 .form__item.sucess input {
     border: green 2px solid;
 }
@@ -118,11 +119,6 @@
 .form__item.fail input {
     border: red 2px solid;
 }
-
-
-
-
-
 
 
 #form__button {
@@ -133,7 +129,7 @@
     border-radius: 5px;
     cursor: pointer;
     background-color: green;
-    color: antiquewhite;
+    color: var(--fontColor);
 }
 
 #form__button:hover {
@@ -165,8 +161,8 @@
     min-height: 80vh;
     margin: 1rem;
     padding: 1rem;
-    background-color: #23263d;
-    color: antiquewhite;
+    background-color: var(--bg-gallery-footer);
+    color: var(--fontColor);
 }
 
 .gallery__card img {
@@ -181,10 +177,12 @@
 // =================== FOOTER STYLE ==============
 .footer {
     width: 100vw;
-    height: 25vh;
-    background-color: #363531;
-    padding: 1.5rem;
+    height: 30vh;
+    background-color: #9d9fa6;
+    padding: 1rem;
     font-family: var(--df-font-family);
+    font-size: small;
+    overflow-y: hidden;
 }
 
 .footer__flex {
@@ -196,13 +194,18 @@
 .footer__link {
     background-color: #9d9fa6;
     color: black;
-    height: 20vh;
+    height: 30vh;
     padding: 1rem;
 }
 
 .footer__link a {
     text-decoration: none;
     color: black;
+}
+
+.footer__link img{
+    width: 100px;
+    height: 100px;
 }
 
 
